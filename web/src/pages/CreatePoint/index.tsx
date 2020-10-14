@@ -135,10 +135,10 @@ const CreatPoint = () => {
         const a = selectedItems.findIndex(a => a === item)
         if (a >= 0) {
             const filter = selectedItems.filter(a => a !== item);
-            setSelectedItems(filter)
-        } else {
-            setSelectedItems([...selectedItems, item])
+            return setSelectedItems(filter)
         }
+        return setSelectedItems([...selectedItems, item])
+
 
     }
     return (
