@@ -4,12 +4,10 @@ import { Map, Marker, TileLayer, } from 'react-leaflet'
 import { LeafletMouseEvent } from 'leaflet'
 import axios from 'axios';
 import { FiArrowLeft } from 'react-icons/fi'
-
-
 import logo from '../../assets/logo.svg'
+
 import './style.css'
 import Api from '../../services/api';
-import { async } from 'q';
 
 
 interface Item {
@@ -37,6 +35,7 @@ const CreatPoint = () => {
     const [initialPosition, setInicialPositio] = useState<[number, number,]>([0, 0])
     const [formData, setFormData] = useState({ name: '', email: '', whatsaap: '' })
     const [selectedItems, setSelectedItems] = useState<number[]>([])
+
 
 
     const history = useHistory()
